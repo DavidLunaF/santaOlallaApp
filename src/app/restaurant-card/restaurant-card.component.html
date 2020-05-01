@@ -1,0 +1,24 @@
+<div id="product-card" class="card-container">
+    <div id="product" class="card-restaurant">
+        <div class="shadow"></div>
+     
+        <div class="card-header">
+            <img [src]=restaurant.img class="card-img">
+            <h2 class="titulo-box">{{restaurant.name}}</h2>   
+        </div>
+        <div class="restaurant">        	
+            <div class="stats-container">            
+                <mat-list class="menu">
+                    <h4 mat-subheader *ngIf="restaurant">Platos disponibles:</h4>
+                    <mat-list-item class="dish"> {{restaurant.plato1}} </mat-list-item>
+                    <mat-list-item class="dish"> {{restaurant.plato2}} </mat-list-item>
+                    <mat-list-item class="dish"> {{restaurant.plato3}} </mat-list-item>
+                   </mat-list>
+            </div>    
+            <div class="cta-button">
+                <a mat-raised-button color="accent" href="tel:{{restaurant.tel}}"> <mat-icon> call</mat-icon>
+                    ¡LLAMA AHORA!</a>                
+            </div>
+        </div>
+    </div>
+</div>

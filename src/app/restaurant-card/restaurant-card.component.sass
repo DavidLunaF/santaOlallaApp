@@ -1,0 +1,90 @@
+/////---- VARIAVEIS SASS
+$card-max-width: 340px 
+$card-min-width: 300px 
+$card-gap: 80px 
+
+$body-margin: 40px 
+$body-width: $body-margin * 2 + $card-max-width * 2 + $card-gap 
+$break-point-1-column: $body-margin * 2 + $card-min-width * 2 + $card-gap 
+
+$box-gap: 22px 
+$color1: #ffaadd
+
+
+body > header, body > main, .content  
+  max-width: $body-width 
+  margin: auto 
+  padding: 0 $body-margin 
+ 
+
+*, *::before, *::after  
+  box-sizing: border-box 
+ 
+
+.card-container
+  color: var(--color-text) 
+  margin-top: 16px 
+  display: grid 
+  place-items: center 
+  padding: 0 
+  @media (max-width: $break-point-1-column )  
+    grid-template-columns: 1fr 
+   
+ 
+
+.card-restaurant  
+  max-width: $card-max-width 
+  width: 100% 
+  padding: 0 0 35px 0
+  border-radius: 8px 
+  box-shadow: 10px 15px 20px -5px #0003 
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%)
+
+.card-header
+  position: relative
+  width: 100%
+
+  
+.card-img 
+    width: 100%
+    border-radius: 8px 8px 0 0
+    padding: 0
+    display: block
+    width: 100%
+    height: 220px
+    object-fit: cover
+
+.titulo-box  
+  text-align: center 
+  font-size: 24px 
+  font-weight: 700
+  margin-top: $box-gap 
+  margin-bottom: $box-gap 
+  color: #fff
+  font-size: 30px
+  line-height: 1.5em
+  text-shadow: 2px 2px 2px #000
+  text-align: center
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+.stats-container
+  padding: 25px
+  height: 40vh
+
+mat-list 
+   overflow: auto
+
+.cta-button
+  display: flex
+  justify-content: center
+  a  
+    text-align: center 
+    border: 0 
+    font-weight: 700 
+    box-shadow: 4px 9px 8px -6px #636363
+    &:active, &:focus  
+      outline: 0 
+    
